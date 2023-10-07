@@ -1,0 +1,58 @@
+java
+public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+        try {
+            // Arithmetic Exception
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception occurred: " + e.getMessage());
+        }
+
+        try {
+            // ArrayIndexOutOfBoundsException
+            int[] numbers = {1, 2, 3};
+            int value = numbers[4];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException occurred: " + e.getMessage());
+        }
+
+        try {
+            // NumberFormatException
+            String numberStr = "abc";
+            int number = Integer.parseInt(numberStr);
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatException occurred: " + e.getMessage());
+        }
+
+        try {
+            // StringIndexOutOfBoundsException
+            String text = "Hello";
+            char character = text.charAt(10);
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("StringIndexOutOfBoundsException occurred: " + e.getMessage());
+        }
+    }
+}
+
+
+
+
+
+
+
+java
+import java.util.Scanner;
+
+public class Example {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter your name:");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+        
+        System.out.println("Enter your age:");
+        int age = scanner.nextInt();
+        System.out.println("You are " + age + " years old.");
+    }
+}
